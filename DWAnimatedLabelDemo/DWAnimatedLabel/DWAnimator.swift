@@ -55,6 +55,13 @@ class DWAnimator: NSObject {
         }
         _isAnimating = true
     }
+
+    func cancelAnimation() {
+        _completion = nil
+        _displayLink?.isPaused = true
+        _displayLink?.invalidate()
+        _isAnimating = false
+    }
     
     // MARK: - Init
     convenience init(animationType: DWAnimationType, duration:TimeInterval) {
