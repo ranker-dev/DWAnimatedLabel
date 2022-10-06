@@ -66,6 +66,10 @@ open class DWAnimatedLabel: UILabel {
         animator.label = self
         animator.startAnimation(completion)
     }
+
+    open func cancelAnimation() {
+        _animator?.cancelAnimation()
+    }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
