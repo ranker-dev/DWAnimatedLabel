@@ -44,7 +44,9 @@ class DWAnimator: NSObject {
             return
         }
         
+        cancelAnimation()
         setup()
+        
         label.layer.removeAllAnimations()
         
         if !_isAnimating {
